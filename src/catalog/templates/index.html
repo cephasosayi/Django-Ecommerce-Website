@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block content %}
+ <h1>Local Library Home</h1>
+ <p>Welcome To LocalLibrary, <span>a website devloped by Cephasosayi</span></p>
+ <h2>Dynamic Content</h2>
+<p>The Library has the following records counts:</p>
+
+<ul>
+	<li><STRONG>Books:</STRONG> {{ num_books }}</li>
+	<li><STRONG>Copies:</STRONG> {{ num_instances }}</li>
+	<li><STRONG>Copies Available:</STRONG> {{ num_instances_available }}</li>
+	<li><STRONG>Authors:</STRONG> {{ num_authors }}</li>
+
+
+
+</ul>
+
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+{% endblock %}

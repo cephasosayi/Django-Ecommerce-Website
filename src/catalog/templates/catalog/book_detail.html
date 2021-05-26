@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	 {{ book.book_cover }} 
+<h1>Book Title: {{ book.title }}</h1>
+<small><strong>Author: </strong>{{ book.author }}</small>
+<p><strong>Category:</strong> {{ book.genre.all|join:", " }}</p>
+
+<p><strong>Describtion:</strong>{{ book.summary}}</p>
+<h5>Book ISBN:<small>{{ book.isbn }}</small></h5>
+{% endblock %}
